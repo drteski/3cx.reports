@@ -1,0 +1,2 @@
+console.log("kek");
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sIm5hbWVzIjpbImNvbnNvbGUiLCJsb2ciXSwibWFwcGluZ3MiOiJBQUFBQSxRQUFRQyxJQUFJIiwic291cmNlc0NvbnRlbnQiOlsiY29uc29sZS5sb2coJ2tlaycpO1xyXG4iXSwiZmlsZSI6ImluZGV4LW1pbi5qcyJ9

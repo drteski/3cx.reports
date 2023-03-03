@@ -28,10 +28,10 @@ gulp.task('js', () => {
 							corejs: 3,
 							modules: false,
 							targets: 'safari > 13.1',
-							useBuiltIns: 'usage'
-						}
-					]
-				]
+							useBuiltIns: 'usage',
+						},
+					],
+				],
 			})
 		)
 		.pipe(uglify())
@@ -63,7 +63,7 @@ gulp.task('nodemon', (cb) => {
 	let started = false;
 	return nodemon({
 		ext: 'js html css scss hbs',
-		script: './bin/www'
+		script: './bin/www',
 	}).on('start', () => {
 		if (!started) {
 			cb();
@@ -78,7 +78,7 @@ gulp.task(
 		browserSync.init(null, {
 			proxy: `${process.env.BASE_URL}:${process.env.PORT}`,
 			files: ['../'],
-			port: process.env.PROXY_PORT
+			port: process.env.PROXY_PORT,
 		});
 	})
 );
