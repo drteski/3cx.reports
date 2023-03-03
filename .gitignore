@@ -1,0 +1,6 @@
+.DS_Store
+/node_modules
+.env
+.history
+/.idea/vcs.xml
+access.log

@@ -1,0 +1,27 @@
+
+{
+	"root": true,
+	"env": {
+		"browser": true
+	},
+	"parserOptions": {
+		"ecmaVersion": 2022,
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"sourceType": "module"
+	},
+	"extends": [
+		"prettier",
+		"airbnb",
+		"plugin:prettier/recommended"
+	],
+	"plugins": [
+		"prettier"
+	],
+	"rules": {
+		"prettier/prettier": [
+			"error"
+		]
+	}
+}
