@@ -1,2 +1,41 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<form action="/getthis" method="get">
+
+	<button class="download">Pobierz i wyświetl raport</button>
+</form>
+
+<div class="tabela">
+	<table>
+		<thead>
+		<tr>
+			<th class="index">Index</th>
+			<th>Czas</th>
+			<th>Dzwoniący</th>
+			<th>Extension</th>
+			<th>Kraj</th>
+			<th>Status</th>
+			<th>Czas łączenia</th>
+			<th>Czas rozmowy</th>
+			<th>Łączny czas</th>
+			<th>Koszt</th>
+			<th>Info</th>
+		</tr>
+		</thead>
+		<tbody>
+		{{#each data}}
+			<tr>
+				<td>{{this.index}}</td>
+				<td class="time">{{this.time}}</td>
+				<td class="caller">{{this.caller}}</td>
+				<td class="extension">{{this.extension}}</td>
+				<td class="country">{{this.country}}</td>
+				<td class="status">{{this.status}}</td>
+				<td class="call-time">{{this.callTime}} s</td>
+				<td class="talk-time">{{this.talkTime}} s</td>
+				<td class="total-time">{{this.totalTime}} s</td>
+				<td class="call-cost">{{this.callCost}} zł</td>
+				<td class="call-cause">{{this.callCause}}</td>
+			</tr>
+		{{/each}}
+		</tbody>
+	</table>
+</div>

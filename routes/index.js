@@ -1,9 +1,22 @@
-var express = require('express');
-var router = express.Router();
+import express from 'express';
+import getReport from '../services/3cx.service.js';
+import parseCsv from '../services/parseCsv.service.js';
+import prepareFile from '../services/prepareFile.service.js';
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+const router = express.Router();
+
+router.get('/getthis', async (req, res) => {
+	await getReport();
+	await prepareFile();
+	console.log('pobrane');
+	res.redirect('/');
 });
 
-module.exports = router;
+router.get('/', async (req, res) => {
+	// await getReport();
+	// await prepareFile();
+	const data = await parseCsv();
+	res.render('index', { title: 'Express', data });
+});
+
+export default router;
